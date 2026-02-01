@@ -1,0 +1,79 @@
+---
+title: "Garman-Kohlhagen European Currency Option Pricing"
+subtitle: "From Theory to Implementation: A Complete PDE Analysis"
+---
+
+## Welcome
+
+This project presents a comprehensive analysis of the **Garman-Kohlhagen model** for pricing European currency options. We bridge theoretical finance with computational methods, providing both analytical solutions and numerical implementations.
+
+::: {.callout-note icon=false}
+## Project Overview
+This work extends the Black-Scholes framework to foreign exchange markets, treating the foreign interest rate as a continuous dividend yield. We derive the governing PDE from first principles and validate three finite difference schemes against closed-form solutions.
+:::
+
+## Project Components
+
+::: {.grid}
+
+::: {.g-col-6}
+### 📊 [Presentation Slides](Presentation_Slide/presentation.qmd)
+
+Interactive RevealJS presentation covering:
+
+- **Theoretical Framework**: SDE to PDE derivation
+- **Analytical Solutions**: Garman-Kohlhagen formulas
+- **Numerical Methods**: FTCS, BTCS, Crank-Nicolson
+- **Validation**: Stability, convergence, and accuracy analysis
+- **The Greeks**: Risk sensitivities and hedging applications
+
+[View Presentation →](Presentation_Slide/presentation.qmd){.btn .btn-primary}
+:::
+
+::: {.g-col-6}
+### 💻 [Source Code Documentation](Source_Code/European_Option_Currency_Pricing.qmd)
+
+Complete Python implementation including:
+
+- **Mathematical Derivation**: Step-by-step PDE development
+- **Analytical Implementation**: Closed-form pricing formulas
+- **Numerical Solvers**: Three finite difference schemes
+- **Comprehensive Validation**: Stability and convergence studies
+- **Visualizations**: 3D surfaces, Greeks, and comparisons
+
+[View Documentation →](Source_Code/European_Option_Currency_Pricing.qmd){.btn .btn-primary}
+:::
+
+:::
+
+## Key Features
+
+- ✓ **Complete Mathematical Framework** - From stochastic dynamics to PDE
+- ✓ **Analytical Solutions** - Garman-Kohlhagen closed-form formulas
+- ✓ **Three Numerical Methods** - FTCS, BTCS, and Crank-Nicolson schemes
+- ✓ **Rigorous Validation** - Stability analysis and convergence studies
+- ✓ **Practical Applications** - Greeks computation and delta hedging
+- ✓ **Performance Benchmarking** - Accuracy vs. computational cost
+
+## About This Project
+
+### Team Members
+- **Leng Devid**
+- **Hem Bellyday**
+- **Phal Menghak**
+- **Lot Soklang**
+
+### Supervisor
+**Professor: Dr. LUEY Sokea**
+
+### Academic Context
+This project was developed as part of advanced coursework in Partial Differential Equations (PDE) and Computational Finance, demonstrating the application of numerical methods to real-world financial derivatives pricing.
+
+---
+
+::: {.callout-tip}
+## Getting Started
+- For a visual overview, start with the [**Presentation**](Presentation_Slide/presentation.qmd)
+- For technical details and code, explore the [**Source Code Documentation**](Source_Code/European_Option_Currency_Pricing.qmd)
+- All code is available on [**GitHub**](https://github.com/LENGDEVID/PDE_Garman_Kohlhagen_Currency_Option_Pricing)
+:::

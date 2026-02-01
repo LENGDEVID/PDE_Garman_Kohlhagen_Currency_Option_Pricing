@@ -1,0 +1,86 @@
+/* Custom styles for Garman-Kohlhagen PDE Website */
+
+/* Homepage styling */
+.grid {
+  display: grid;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.g-col-6 {
+  grid-column: span 6;
+}
+
+@media (max-width: 768px) {
+  .g-col-6 {
+    grid-column: span 12;
+  }
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #2780e3;
+  color: white;
+  border: 2px solid #2780e3;
+}
+
+.btn-primary:hover {
+  background-color: #1a6bc9;
+  border-color: #1a6bc9;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Callout enhancements */
+.callout {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-left: 4px solid;
+  border-radius: 0.25rem;
+}
+
+.callout-note {
+  background-color: #e7f2fa;
+  border-left-color: #2780e3;
+}
+
+.callout-tip {
+  background-color: #d1f2eb;
+  border-left-color: #20c997;
+}
+
+/* Navigation enhancements */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Code block styling */
+pre {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.2s ease;
+}
+
+/* Footer styling */
+.page-footer {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid #dee2e6;
+  font-size: 0.9rem;
+  color: #6c757d;
+}

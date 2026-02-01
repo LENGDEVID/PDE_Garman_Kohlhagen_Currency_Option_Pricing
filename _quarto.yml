@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Garman-Kohlhagen Currency Option Pricing"
+  description: "Complete PDE Analysis: From Theory to Implementation"
+  favicon: favicon.png
+  
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Presentation"
+        href: Presentation_Slide/presentation.qmd
+      - text: "Source Code"
+        href: Source_Code/European_Option_Currency_Pricing.qmd
+    right:
+      - icon: github
+        href: https://github.com/LENGDEVID/PDE_Garman_Kohlhagen_Currency_Option_Pricing
+        aria-label: GitHub Repository
+  
+  page-footer:
+    left: "© 2026 Leng Devid, Hem Bellyday, Phal Menghak, Lot Soklang"
+    right: "Professor: Dr. LUEY Sokea"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    code-fold: true
+    code-tools: true
+    smooth-scroll: true
+    link-external-newwindow: true
+
+execute:
+  freeze: auto

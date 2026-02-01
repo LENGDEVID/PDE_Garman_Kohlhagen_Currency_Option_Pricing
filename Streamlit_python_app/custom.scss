@@ -1,0 +1,384 @@
+/*-- scss:defaults --*/
+$body-bg: #f8f9fa;
+$body-color: #2c3e50;
+$link-color: #2c5f8d;
+$presentation-heading-color: #1e3a5f;
+$code-block-bg: #f4f4f4;
+
+/*-- scss:rules --*/
+
+/* Global Styling */
+.reveal {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: $presentation-heading-color;
+}
+
+.reveal h2 {
+  font-size: 2em;
+  border-bottom: 3px solid #2c5f8d;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.8em;
+}
+
+.reveal h3 {
+  font-size: 1.5em;
+  color: #34495e;
+  margin-top: 1em;
+}
+
+/* Slide Backgrounds */
+.reveal .slide-background {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+section[data-background-color="#1e3a5f"],
+.reveal section[data-background-color="#1e3a5f"] {
+  color: white !important;
+}
+
+section[data-background-color="#1e3a5f"] h1,
+section[data-background-color="#1e3a5f"] h2,
+.reveal section[data-background-color="#1e3a5f"] h1,
+.reveal section[data-background-color="#1e3a5f"] h2 {
+  color: white !important;
+  border-bottom-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+section[data-background-color="#2c5f8d"],
+.reveal section[data-background-color="#2c5f8d"] {
+  color: white !important;
+}
+
+/* Scrollable Content */
+.scrollable {
+  overflow-y: auto !important;
+  max-height: 600px;
+  padding-right: 20px;
+}
+
+.scrollable::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollable::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background: #2c5f8d;
+  border-radius: 10px;
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+  background: #1e3a5f;
+}
+
+/* Callout Boxes */
+.callout {
+  border-left: 5px solid #2c5f8d;
+  background-color: #f0f4f8;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.callout-note {
+  border-left-color: #3498db;
+  background-color: #eaf4fc;
+}
+
+.callout-tip {
+  border-left-color: #2ecc71;
+  background-color: #e8f8f0;
+}
+
+.callout-warning {
+  border-left-color: #f39c12;
+  background-color: #fef5e7;
+}
+
+.callout-important {
+  border-left-color: #e74c3c;
+  background-color: #fdeaea;
+}
+
+.callout-title {
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+/* Code Blocks */
+.reveal pre {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid #2c5f8d;
+}
+
+.reveal code {
+  background-color: #f4f4f4;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.85em;
+}
+
+.reveal pre code {
+  background-color: transparent;
+  padding: 0;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Tables */
+.reveal table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.reveal table th {
+  background-color: #2c5f8d;
+  color: white;
+  font-weight: 600;
+  padding: 0.8em;
+  text-align: left;
+  border-bottom: 2px solid #1e3a5f;
+}
+
+.reveal table td {
+  padding: 0.7em;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: white;
+}
+
+.reveal table tr:nth-child(even) td {
+  background-color: #f8f9fa;
+}
+
+.reveal table tr:hover td {
+  background-color: #e3f2fd;
+  transition: background-color 0.2s ease;
+}
+
+/* Lists */
+.reveal ul,
+.reveal ol {
+  margin-left: 1.5em;
+}
+
+.reveal li {
+  margin-bottom: 0.5em;
+  padding-left: 0.2em;
+  /* Add slight padding for text */
+}
+
+/* Ensure nested lists look okay */
+.reveal ul ul,
+.reveal ol ol,
+.reveal ul ol,
+.reveal ol ul {
+  margin-left: 1.5em;
+  /* Standard indentation */
+}
+
+.reveal .incremental li {
+  opacity: 0.5;
+}
+
+.reveal .incremental li.current-fragment {
+  opacity: 1;
+  font-weight: 500;
+}
+
+/* Columns */
+.reveal .columns {
+  display: flex;
+  gap: 2em;
+  align-items: flex-start;
+}
+
+.reveal .column {
+  flex: 1;
+}
+
+/* Math Equations */
+.reveal .MathJax {
+  color: #2c3e50;
+}
+
+/* Boxed Equations */
+.reveal .boxed {
+  border: 2px solid #2c5f8d;
+  background-color: #f0f4f8;
+  padding: 1em;
+  border-radius: 8px;
+  margin: 1em 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Links */
+.reveal a {
+  color: #2c5f8d;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s ease;
+}
+
+.reveal a:hover {
+  border-bottom: 2px solid #2c5f8d;
+}
+
+/* Footer */
+.reveal .footer {
+  font-size: 0.6em;
+  color: #7f8c8d;
+  padding: 0.5em 1em;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Slide Numbers */
+.reveal .slide-number {
+  background-color: #2c5f8d;
+  color: white;
+  font-size: 0.6em;
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+}
+
+/* Progress Bar */
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.1);
+  height: 4px;
+}
+
+.reveal .progress span {
+  background: #2c5f8d;
+  transition: width 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}
+
+/* Custom Emphasis */
+.reveal em {
+  color: #e74c3c;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.reveal strong {
+  color: #2c5f8d;
+  font-weight: 700;
+}
+
+/* Image Styling */
+.reveal img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+}
+
+/* Matplotlib Figures */
+.reveal .figure {
+  margin: 1em 0;
+}
+
+/* Block Quotes */
+.reveal blockquote {
+  border-left: 5px solid #2c5f8d;
+  background-color: #f0f4f8;
+  padding: 1em 1.5em;
+  margin: 1em 0;
+  font-style: italic;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Checkmarks and Symbols */
+.reveal .checkmark {
+  color: #2ecc71;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Animation for reveals */
+.reveal .animate-fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Professional color palette */
+:root {
+  --primary-blue: #2c5f8d;
+  --dark-blue: #1e3a5f;
+  --accent-green: #2ecc71;
+  --accent-red: #e74c3c;
+  --accent-orange: #f39c12;
+  --neutral-gray: #7f8c8d;
+  --light-gray: #f8f9fa;
+  --white: #ffffff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .reveal {
+    font-size: 24px;
+  }
+
+  .reveal .columns {
+    flex-direction: column;
+  }
+
+  .scrollable {
+    max-height: 400px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .reveal .slide-background {
+    background: white !important;
+  }
+
+  .reveal {
+    font-size: 12pt;
+  }
+}
+
+/* Add this to the bottom of your custom.scss */
+.reveal .slide-number {
+  display: block !important;
+  color: #1e3a5f !important; /* Dark blue for visibility */
+  background-color: rgba(255, 255, 255, 0.7) !important; /* Semi-transparent white box */
+  z-index: 99 !important;    /* Forces it to the front layer */
+  font-weight: bold;
+  bottom: 8px !important;
+  right: 8px !important;
+}
