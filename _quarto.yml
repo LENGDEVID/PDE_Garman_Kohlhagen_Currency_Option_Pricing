@@ -17,6 +17,8 @@ website:
         href: Presentation_Slide_Currency_Option_Pricing/presentation.qmd
       - text: "Source Code"
         href: Source_Code/European_Option_Currency_Pricing.qmd
+      - text: "Interactive App"
+        href: https://pdegarmankohlhagencurrencyoptionpricing-aoph8lblbkhpztlgcxacck.streamlit.app
     right:
       - icon: github
         href: https://github.com/LENGDEVID/PDE_Garman_Kohlhagen_Currency_Option_Pricing

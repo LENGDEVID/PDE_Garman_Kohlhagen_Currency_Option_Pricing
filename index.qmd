@@ -16,7 +16,7 @@ This work extends the Black-Scholes framework to foreign exchange markets, treat
 
 ::: {.grid}
 
-::: {.g-col-6}
+::: {.g-col-4}
 ### 📊 [Presentation Slides](Presentation_Slide_Currency_Option_Pricing/presentation.qmd)
 
 Interactive RevealJS presentation covering:
@@ -30,7 +30,7 @@ Interactive RevealJS presentation covering:
 [View Presentation →](Presentation_Slide_Currency_Option_Pricing/presentation.qmd){.btn .btn-primary}
 :::
 
-::: {.g-col-6}
+::: {.g-col-4}
 ### 💻 [Source Code Documentation](Source_Code/European_Option_Currency_Pricing.qmd)
 
 Complete Python implementation including:
@@ -42,6 +42,20 @@ Complete Python implementation including:
 - **Visualizations**: 3D surfaces, Greeks, and comparisons
 
 [View Documentation →](Source_Code/European_Option_Currency_Pricing.qmd){.btn .btn-primary}
+:::
+
+::: {.g-col-4}
+### 🚀 [Interactive Application](https://pdegarmankohlhagencurrencyoptionpricing-aoph8lblbkhpztlgcxacck.streamlit.app)
+
+Live Streamlit app for interactive exploration:
+
+- **Real-time Pricing**: Adjust parameters and see instant results
+- **Greeks Visualization**: Interactive plots of all Greeks
+- **Method Comparison**: FTCS, BTCS, Crank-Nicolson side-by-side
+- **Stability Analysis**: Von Neumann stability verification
+- **3D Surfaces**: Explore option price landscapes
+
+[Launch App →](https://pdegarmankohlhagencurrencyoptionpricing-aoph8lblbkhpztlgcxacck.streamlit.app){.btn .btn-primary target="_blank"}
 :::
 
 :::
@@ -75,5 +89,6 @@ This project was developed as part of advanced coursework in Partial Differentia
 ## Getting Started
 - For a visual overview, start with the [**Presentation**](Presentation_Slide_Currency_Option_Pricing/presentation.qmd)
 - For technical details and code, explore the [**Source Code Documentation**](Source_Code/European_Option_Currency_Pricing.qmd)
+- Try the [**Interactive App**](https://pdegarmankohlhagencurrencyoptionpricing-aoph8lblbkhpztlgcxacck.streamlit.app) to experiment with parameters
 - All code is available on [**GitHub**](https://github.com/LENGDEVID/PDE_Garman_Kohlhagen_Currency_Option_Pricing)
 :::
