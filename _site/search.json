@@ -231,284 +231,326 @@
     "text": "10.4 Appendix D: Additional Plots\nAdditional plots for stability regions (CFL condition) and detailed convergence error surfaces are available in the Results section."
   },
   {
-    "objectID": "Presentation_Slide/HOSTING_INSTRUCTIONS.html",
-    "href": "Presentation_Slide/HOSTING_INSTRUCTIONS.html",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/HOSTING_INSTRUCTIONS.html",
+    "href": "Presentation_Slide_Currency_Option_Pricing/HOSTING_INSTRUCTIONS.html",
     "title": "",
     "section": "",
     "text": "Code"
   },
   {
-    "objectID": "Presentation_Slide/HOSTING_INSTRUCTIONS.html#prerequisites",
-    "href": "Presentation_Slide/HOSTING_INSTRUCTIONS.html#prerequisites",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/HOSTING_INSTRUCTIONS.html#prerequisites",
+    "href": "Presentation_Slide_Currency_Option_Pricing/HOSTING_INSTRUCTIONS.html#prerequisites",
     "title": "",
     "section": "Prerequisites",
     "text": "Prerequisites\n\nA GitHub account.\nGit installed on your computer."
   },
   {
-    "objectID": "Presentation_Slide/HOSTING_INSTRUCTIONS.html#step-by-step-instructions",
-    "href": "Presentation_Slide/HOSTING_INSTRUCTIONS.html#step-by-step-instructions",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/HOSTING_INSTRUCTIONS.html#step-by-step-instructions",
+    "href": "Presentation_Slide_Currency_Option_Pricing/HOSTING_INSTRUCTIONS.html#step-by-step-instructions",
     "title": "",
     "section": "Step-by-Step Instructions",
     "text": "Step-by-Step Instructions\n\n1. Initialize Git Repository\nOpen your terminal, navigate to this folder (Presentation_Slide_Currency_Option_Pricing), and run:\ngit init\ngit add .\ngit commit -m \"Initial commit of presentation\"\n\n\n2. Create a Repository on GitHub\n\nLog in to GitHub.\nClick the + icon in the top right and select New repository.\nName your repository (e.g., currency-option-pricing-slides).\nImportant: Make sure the repository is Public (unless you have GitHub Pro, Pages for private repos requires a paid plan).\nDO NOT initialize with README, .gitignore, or license (you already have files).\nClick Create repository.\n\n\n\n3. Push to GitHub\nCopy the commands provided by GitHub under “…or push an existing repository from the command line” and run them in your terminal. They will look like this:\ngit branch -M main\ngit remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git\ngit push -u origin main\n(Replace YOUR_USERNAME and YOUR_REPO_NAME with your actual details)\n\n\n4. Enable GitHub Pages\n\nOn your repository page on GitHub, click Settings (top tab bar).\nIn the left sidebar, scroll down and click Pages.\nUnder Build and deployment &gt; Source, select Deploy from a branch.\nUnder Branch, select main (or master) and ensure the folder is set to / (root).\nClick Save.\n\n\n\n5. View Your Presentation\nGitHub will take a minute or two to build and deploy your site. - You will see the URL displayed at the top of the Pages settings page (usually https://username.github.io/repo-name/). - Visit that URL to see your live presentation!"
   },
   {
-    "objectID": "Presentation_Slide/HOSTING_INSTRUCTIONS.html#updating-the-presentation",
-    "href": "Presentation_Slide/HOSTING_INSTRUCTIONS.html#updating-the-presentation",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/HOSTING_INSTRUCTIONS.html#updating-the-presentation",
+    "href": "Presentation_Slide_Currency_Option_Pricing/HOSTING_INSTRUCTIONS.html#updating-the-presentation",
     "title": "",
     "section": "Updating the Presentation",
     "text": "Updating the Presentation\nIf you make changes to presentation.qmd: 1. Run quarto render presentation.qmd locally to regenerate index.html. 2. Commit and push the changes: bash    git add .    git commit -m \"Update slides\"    git push The site will automatically update."
   },
   {
-    "objectID": "Presentation_Slide/index.html#overview",
-    "href": "Presentation_Slide/index.html#overview",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#overview",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#overview",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Overview",
     "text": "Overview\n\n\nProject Scope\n\nAnalytical Derivation: From SDE to PDE\nClosed-Form Solutions: Garman-Kohlhagen formulas\nNumerical Methods: FTCS, BTCS, Crank-Nicolson\nValidation: Stability, convergence, accuracy\nGreeks: Analytical and numerical computation\n\n\nKey Deliverables\n✓ Complete mathematical framework\n✓ Three finite difference implementations\n✓ Comprehensive validation suite\n✓ Performance benchmarking\n✓ Practical trading applications\n\n\n\n\nObjective\n\n\nBridge theoretical finance with computational methods for pricing European currency options in FX markets"
   },
   {
-    "objectID": "Presentation_Slide/index.html#motivation-market-context",
-    "href": "Presentation_Slide/index.html#motivation-market-context",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#motivation-market-context",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#motivation-market-context",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Motivation & Market Context",
     "text": "Motivation & Market Context\nWhy Currency Options Matter\n\nGlobal Trade: $25+ trillion annual FX turnover\nRisk Management: Hedge exchange rate volatility\nInvestment Strategy: Leverage directional views\nCorporate Finance: Manage international cash flows\n\nHistorical Development"
   },
   {
-    "objectID": "Presentation_Slide/index.html#mathematical-framework",
-    "href": "Presentation_Slide/index.html#mathematical-framework",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#mathematical-framework",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#mathematical-framework",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Mathematical Framework",
     "text": "Mathematical Framework\nForeign Exchange Market Setup\n\n\n\nSymbol\nDescription\nExample Value\n\n\n\n\n\\(S(t)\\)\nSpot exchange rate\n100\n\n\n\\(K\\)\nStrike price\n100\n\n\n\\(r_d\\)\nDomestic interest rate\n5%\n\n\n\\(r_f\\)\nForeign interest rate\n3%\n\n\n\\(\\sigma\\)\nVolatility\n20%\n\n\n\\(T\\)\nTime to maturity\n1 year\n\n\n\n\n\n\n\n\n\nKey Insight\n\n\nForeign currency earns \\(r_f\\), analogous to a continuous dividend yield in equity options"
   },
   {
-    "objectID": "Presentation_Slide/index.html#stochastic-differential-equation",
-    "href": "Presentation_Slide/index.html#stochastic-differential-equation",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#stochastic-differential-equation",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#stochastic-differential-equation",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Stochastic Differential Equation",
     "text": "Stochastic Differential Equation\nRisk-Neutral Dynamics\nUnder the risk-neutral measure \\(\\mathbb{Q}\\), the exchange rate follows:\n\\[\n\\boxed{dS_t = (r_d - r_f)S_t \\, dt + \\sigma S_t \\, dW_t}\n\\]\n\n\nComponents:\n\nDrift: \\((r_d - r_f)S_t\\)\n\nInterest rate differential\n\nVolatility: \\(\\sigma S_t dW_t\\)\n\nRandom fluctuations\n\n\\(W_t\\): Standard Brownian motion"
   },
   {
-    "objectID": "Presentation_Slide/index.html#pde-derivation-hedging-approach",
-    "href": "Presentation_Slide/index.html#pde-derivation-hedging-approach",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#pde-derivation-hedging-approach",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#pde-derivation-hedging-approach",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "PDE Derivation: Hedging Approach",
     "text": "PDE Derivation: Hedging Approach\nStep 1: Itô’s Lemma\nFor option value \\(V(S,t)\\):\n\\[\ndV = \\left( \\frac{\\partial V}{\\partial t} + \\frac{1}{2}\\sigma^2 S^2 \\frac{\\partial^2 V}{\\partial S^2} \\right)dt + \\frac{\\partial V}{\\partial S}dS\n\\]\nStep 2: Hedged Portfolio\nConstruct portfolio: \\(\\Pi = V - \\Delta S\\) where \\(\\Delta = \\frac{\\partial V}{\\partial S}\\)\n\\[\nd\\Pi = dV - \\Delta dS\n\\]\n\n\n\n\n\n\nDelta Hedging\n\n\nShort position in foreign currency incurs interest cost \\(r_f \\Delta S \\, dt\\)"
   },
   {
-    "objectID": "Presentation_Slide/index.html#the-garman-kohlhagen-pde",
-    "href": "Presentation_Slide/index.html#the-garman-kohlhagen-pde",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#the-garman-kohlhagen-pde",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#the-garman-kohlhagen-pde",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "The Garman-Kohlhagen PDE",
     "text": "The Garman-Kohlhagen PDE\nStep 3: No-Arbitrage Principle\nRisk-free portfolio must earn domestic rate: \\(d\\Pi = r_d \\Pi \\, dt\\)\nFinal Result\n\\[\n\\boxed{\\frac{\\partial V}{\\partial t} + (r_d - r_f)S \\frac{\\partial V}{\\partial S} + \\frac{1}{2}\\sigma^2 S^2 \\frac{\\partial^2 V}{\\partial S^2} - r_d V = 0}\n\\]\n\n\nTerminal Condition: \\[V(S,T) = \\max(S-K, 0)\\] for call options\n\nBoundary Conditions: - As \\(S \\to 0\\): \\(V \\to 0\\) - As \\(S \\to \\infty\\): \\(V \\sim S e^{-r_f \\tau}\\)"
   },
   {
-    "objectID": "Presentation_Slide/index.html#closed-form-formulas",
-    "href": "Presentation_Slide/index.html#closed-form-formulas",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#closed-form-formulas",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#closed-form-formulas",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Closed-Form Formulas",
     "text": "Closed-Form Formulas\nGarman-Kohlhagen Solution\n\n\nCall Option: \\[\nC = S e^{-r_f \\tau} N(d_1) - K e^{-r_d \\tau} N(d_2)\n\\]\nPut Option: \\[\nP = K e^{-r_d \\tau} N(-d_2) - S e^{-r_f \\tau} N(-d_1)\n\\]\n\nWhere: \\[\nd_1 = \\frac{\\ln(S/K) + (r_d - r_f + \\sigma^2/2)\\tau}{\\sigma\\sqrt{\\tau}}\n\\]\n\\[\nd_2 = d_1 - \\sigma\\sqrt{\\tau}\n\\]\n\\(N(\\cdot)\\) = Standard normal CDF\n\\(\\tau = T - t\\) = Time to maturity"
   },
   {
-    "objectID": "Presentation_Slide/index.html#implementation-validation",
-    "href": "Presentation_Slide/index.html#implementation-validation",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#implementation-validation",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#implementation-validation",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Implementation & Validation",
     "text": "Implementation & Validation\n\n\nCode\nimport numpy as np\nfrom scipy.stats import norm\n\ndef gk_call(S, K, rd, rf, sigma, tau):\n    \"\"\"Garman-Kohlhagen European call option price\"\"\"\n    d1 = (np.log(S/K) + (rd - rf + 0.5*sigma**2)*tau) / (sigma*np.sqrt(tau))\n    d2 = d1 - sigma*np.sqrt(tau)\n    return S*np.exp(-rf*tau)*norm.cdf(d1) - K*np.exp(-rd*tau)*norm.cdf(d2)\n\ndef gk_put(S, K, rd, rf, sigma, tau):\n    \"\"\"Garman-Kohlhagen European put option price\"\"\"\n    d1 = (np.log(S/K) + (rd - rf + 0.5*sigma**2)*tau) / (sigma*np.sqrt(tau))\n    d2 = d1 - sigma*np.sqrt(tau)\n    return K*np.exp(-rd*tau)*norm.cdf(-d2) - S*np.exp(-rf*tau)*norm.cdf(-d1)\n\n# Benchmark calculation\nS, K, rd, rf, sigma, tau = 100, 100, 0.05, 0.03, 0.20, 1.0\ncall_price = gk_call(S, K, rd, rf, sigma, tau)\nput_price = gk_put(S, K, rd, rf, sigma, tau)\n\nprint(f\"Call Option Price: ${call_price:.4f}\")\nprint(f\"Put Option Price:  ${put_price:.4f}\")\nprint(f\"Put-Call Parity Check: {np.abs(call_price - put_price - (S*np.exp(-rf*tau) - K*np.exp(-rd*tau))) &lt; 1e-10}\")\n\n\nCall Option Price: $8.6525\nPut Option Price:  $6.7309\nPut-Call Parity Check: True"
   },
   {
-    "objectID": "Presentation_Slide/index.html#option-price-behavior",
-    "href": "Presentation_Slide/index.html#option-price-behavior",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#option-price-behavior",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#option-price-behavior",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Option Price Behavior",
     "text": "Option Price Behavior\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\nTime value decreases as maturity approaches. Options converge to intrinsic value at expiry.\n\n\n\n\n\n\n\n\n\nKey Insights: Option Price Behavior\n\n\n\nColor gradient shows time value: Darker curves (longer τ) are further above intrinsic value (gray shaded area) → more time = more optionality\nAll curves converge to payoff: As τ → 0 (red curve), option price approaches max(S-K, 0) for calls or max(K-S, 0) for puts → time value disappears\nStrike price (K=100) is the pivot: Left of strike = out-of-the-money, right of strike = in-the-money for calls (opposite for puts)\nDeep ITM behavior: Far right, curves become nearly parallel to intrinsic value → mostly intrinsic, minimal time value\nDeep OTM behavior: Far left, curves flatten near zero → low probability of finishing in-the-money, small time value\nMaximum time value at ATM: Near strike (S ≈ K), gap between curves and intrinsic value is largest → highest uncertainty = highest optionality"
   },
   {
-    "objectID": "Presentation_Slide/index.html#option-greeks-risk-sensitivities",
-    "href": "Presentation_Slide/index.html#option-greeks-risk-sensitivities",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#option-greeks-risk-sensitivities",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#option-greeks-risk-sensitivities",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Option Greeks: Risk Sensitivities",
     "text": "Option Greeks: Risk Sensitivities\nAnalytical Formulas\n\n\n\n\n\n\n\n\n\nGreek\nFormula\nInterpretation\n\n\n\n\nDelta (Δ)\n\\(\\frac{\\partial V}{\\partial S} = e^{-r_f\\tau} N(d_1)\\)\nSpot price sensitivity\n\n\nGamma (Γ)\n\\(\\frac{\\partial^2 V}{\\partial S^2} = \\frac{e^{-r_f\\tau} n(d_1)}{S\\sigma\\sqrt{\\tau}}\\)\nDelta sensitivity\n\n\nVega (ν)\n\\(\\frac{\\partial V}{\\partial \\sigma} = S e^{-r_f\\tau} n(d_1) \\sqrt{\\tau}\\)\nVolatility sensitivity\n\n\nTheta (Θ)\n\\(\\frac{\\partial V}{\\partial t} = -\\frac{S e^{-r_f\\tau} n(d_1) \\sigma}{2\\sqrt{\\tau}} + \\cdots\\)\nTime decay\n\n\nRho (ρ)\n\\(\\frac{\\partial V}{\\partial r_d} = K \\tau e^{-r_d\\tau} N(d_2)\\)\nInterest rate sensitivity\n\n\n\n\n\n\nCode\ndef greeks_call(S, K, rd, rf, sigma, tau):\n    \"\"\"Calculate all Greeks for call option\"\"\"\n    d1 = (np.log(S/K) + (rd - rf + 0.5*sigma**2)*tau) / (sigma*np.sqrt(tau))\n    d2 = d1 - sigma*np.sqrt(tau)\n    \n    delta = np.exp(-rf*tau) * norm.cdf(d1)\n    gamma = np.exp(-rf*tau) * norm.pdf(d1) / (S*sigma*np.sqrt(tau))\n    vega = S * np.exp(-rf*tau) * norm.pdf(d1) * np.sqrt(tau)\n    theta = -(S*np.exp(-rf*tau)*norm.pdf(d1)*sigma)/(2*np.sqrt(tau)) + \\\n            rf*S*np.exp(-rf*tau)*norm.cdf(d1) - rd*K*np.exp(-rd*tau)*norm.cdf(d2)\n    rho = K*tau*np.exp(-rd*tau)*norm.cdf(d2)\n    \n    return {'Delta': delta, 'Gamma': gamma, 'Vega': vega, 'Theta': theta, 'Rho': rho}"
   },
   {
-    "objectID": "Presentation_Slide/index.html#greeks-visualization",
-    "href": "Presentation_Slide/index.html#greeks-visualization",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#greeks-visualization",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#greeks-visualization",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Greeks Visualization",
     "text": "Greeks Visualization\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKey Insights: Understanding the Greeks\n\n\n\nDelta peaks at ATM: At-the-money options (S ≈ K) have Delta around 0.5, meaning 50% probability of finishing in-the-money\nGamma is highest at ATM: Maximum curvature at strike means Delta changes most rapidly here → frequent rebalancing needed for hedges\nVega follows Gamma: ATM options are most sensitive to volatility changes → highest exposure to implied volatility risk\nTheta is most negative at ATM: Time decay is fastest where time value is highest → selling ATM options captures maximum theta\nAll Greeks converge to zero deep in/out of the money → extreme options have minimal sensitivity to market changes"
   },
   {
-    "objectID": "Presentation_Slide/index.html#delta-hedging-application",
-    "href": "Presentation_Slide/index.html#delta-hedging-application",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#delta-hedging-application",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#delta-hedging-application",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Delta Hedging Application",
     "text": "Delta Hedging Application\nPractical Risk Management\n\n\n\n\n\n\n\n\n\n\nDelta-hedging reduces risk by 87%. Residual risk from gamma/vega.\n\n\n\n\n\n\n\n\nResult\n\n\nDelta-hedging reduces P&L volatility by ~87%. Residual risk from gamma/vega effects.\n\n\n\n\n\n\n\n\n\nKey Insights: Delta Hedging in Practice\n\n\n\n87% risk reduction: Unhedged P&L swings wildly with spot moves, but delta-hedged position stays nearly flat\nLeft plot shows effectiveness: Red (unhedged) has large swings, green (hedged) stays close to zero → hedging works!\nResidual 13% risk comes from: Gamma (Delta changes between rebalances), Vega (volatility shifts), and discrete rebalancing\nReal-world application: Market makers use this to provide liquidity without taking directional bets on currency moves"
   },
   {
-    "objectID": "Presentation_Slide/index.html#finite-difference-discretization",
-    "href": "Presentation_Slide/index.html#finite-difference-discretization",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#finite-difference-discretization",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#finite-difference-discretization",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Finite Difference Discretization",
     "text": "Finite Difference Discretization\nProblem Setup\nSpatial Domain: \\(S \\in [S_{min}, S_{max}]\\) with \\(M\\) points\nTemporal Domain: \\(t \\in [0, T]\\) with \\(N\\) points\n\n\nGrid Notation:\n\n\\(S_i = S_{min} + i \\cdot \\Delta S\\)\n\\(t_n = n \\cdot \\Delta t\\)\n\\(V_i^n \\approx V(S_i, t_n)\\)\n\nBoundary Conditions:\n\n\\(V_0^n = 0\\) (S → 0)\n\\(V_M^n = S_M - K e^{-r_d(T-t_n)}\\) (S → ∞)"
   },
   {
-    "objectID": "Presentation_Slide/index.html#three-numerical-schemes",
-    "href": "Presentation_Slide/index.html#three-numerical-schemes",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#three-numerical-schemes",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#three-numerical-schemes",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Three Numerical Schemes",
     "text": "Three Numerical Schemes\n1. Forward-Time Central-Space (FTCS)\n\n\n\n\n\n\nConditionally Stable\n\n\nStability requires: \\(\\Delta t \\leq \\frac{\\Delta S^2}{\\sigma^2 S_{max}^2}\\) (CFL condition)\n\n\n\n\\[\nV_i^{n+1} = V_i^n + \\Delta t \\left[ (r_d - r_f)S_i \\frac{V_{i+1}^n - V_{i-1}^n}{2\\Delta S} + \\frac{1}{2}\\sigma^2 S_i^2 \\frac{V_{i+1}^n - 2V_i^n + V_{i-1}^n}{\\Delta S^2} - r_d V_i^n \\right]\n\\]\n\nExplicit: Directly computes next time step\nFast: No matrix inversion\nRisk: Can become unstable"
   },
   {
-    "objectID": "Presentation_Slide/index.html#three-numerical-schemes-cont.",
-    "href": "Presentation_Slide/index.html#three-numerical-schemes-cont.",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#three-numerical-schemes-cont.",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#three-numerical-schemes-cont.",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Three Numerical Schemes (cont.)",
     "text": "Three Numerical Schemes (cont.)\n2. Backward-Time Central-Space (BTCS)\n\n\n\n\n\n\nUnconditionally Stable\n\n\nNo stability restriction on time step size\n\n\n\n\\[\nV_i^{n+1} = V_i^n + \\Delta t \\left[ (r_d - r_f)S_i \\frac{V_{i+1}^{n+1} - V_{i-1}^{n+1}}{2\\Delta S} + \\frac{1}{2}\\sigma^2 S_i^2 \\frac{V_{i+1}^{n+1} - 2V_i^{n+1} + V_{i-1}^{n+1}}{\\Delta S^2} - r_d V_i^{n+1} \\right]\n\\]\n\nImplicit: Solve tridiagonal system\nStable: Large time steps allowed\nCost: Matrix solve at each step"
   },
   {
-    "objectID": "Presentation_Slide/index.html#three-numerical-schemes-cont.-1",
-    "href": "Presentation_Slide/index.html#three-numerical-schemes-cont.-1",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#three-numerical-schemes-cont.-1",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#three-numerical-schemes-cont.-1",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Three Numerical Schemes (cont.)",
     "text": "Three Numerical Schemes (cont.)\n3. Crank-Nicolson (CN)\n\n\n\n\n\n\nBest of Both Worlds\n\n\nUnconditionally stable + Second-order time accuracy\n\n\n\n\\[\n\\frac{V_i^{n+1} - V_i^n}{\\Delta t} = \\frac{1}{2}\\left[ \\mathcal{L}V^{n+1} + \\mathcal{L}V^n \\right]\n\\]\nwhere \\(\\mathcal{L}\\) is the spatial operator.\n\nAccuracy: \\(O(\\Delta t^2, \\Delta S^2)\\)\nStability: Unconditional\nOptimal: Production standard"
   },
   {
-    "objectID": "Presentation_Slide/index.html#implementation-example",
-    "href": "Presentation_Slide/index.html#implementation-example",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#implementation-example",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#implementation-example",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Implementation Example",
     "text": "Implementation Example\n\n\nCode\ndef crank_nicolson(S_min, S_max, M, T, N, K, rd, rf, sigma, option_type='call'):\n    \"\"\"Crank-Nicolson scheme for Garman-Kohlhagen PDE\"\"\"\n    dS = (S_max - S_min) / M\n    dt = T / N\n    S = np.linspace(S_min, S_max, M+1)\n    V = np.maximum(S - K, 0) if option_type == 'call' else np.maximum(K - S, 0)\n    \n    # Construct tridiagonal matrix\n    alpha = np.zeros(M+1)\n    beta = np.zeros(M+1)\n    gamma = np.zeros(M+1)\n    \n    for i in range(1, M):\n        alpha[i] = -0.25*dt*(sigma**2*S[i]**2/dS**2 - (rd-rf)*S[i]/dS)\n        beta[i] = 1 + 0.5*dt*(sigma**2*S[i]**2/dS**2 + rd)\n        gamma[i] = -0.25*dt*(sigma**2*S[i]**2/dS**2 + (rd-rf)*S[i]/dS)\n    \n    # Time-stepping (backward from T to 0)\n    for n in range(N):\n        tau = (n+1)*dt\n        b = V.copy()\n        for i in range(1, M):\n            b[i] = -alpha[i]*V[i-1] + (2-beta[i])*V[i] - gamma[i]*V[i+1]\n        \n        # Boundary conditions\n        b[0] = 0\n        b[M] = S_max - K*np.exp(-rd*tau) if option_type == 'call' else 0\n        \n        \n        # Thomas algorithm (tridiagonal solver)\n        V = thomas_algorithm(alpha, beta+1, gamma, b)\n    \n    return S, V\n\ndef thomas_algorithm(a, b, c, d):\n    \"\"\"Solve tridiagonal system Ax=d\"\"\"\n    n = len(d)\n    c_prime = np.zeros(n-1)\n    d_prime = np.zeros(n)\n    x = np.zeros(n)\n    \n    c_prime[0] = c[0] / b[0]\n    d_prime[0] = d[0] / b[0]\n    \n    for i in range(1, n-1):\n        c_prime[i] = c[i] / (b[i] - a[i]*c_prime[i-1])\n    \n    for i in range(1, n):\n        d_prime[i] = (d[i] - a[i]*d_prime[i-1]) / (b[i] - a[i]*c_prime[i-1])\n    \n    x[-1] = d_prime[-1]\n    for i in range(n-2, -1, -1):\n        x[i] = d_prime[i] - c_prime[i]*x[i+1]\n    \n    return x\n\n# Demonstrate\n# S_num, V_num = crank_nicolson(50, 150, 100, 1.0, 200, K, rd, rf, sigma)\n# print(f\"Numerical Call Price at S=100: ${np.interp(100, S_num, V_num):.4f}\")\nprint(f\"Analytical Call Price at S=100: ${gk_call(100, K, rd, rf, sigma, 1.0):.4f}\")\n# print(f\"Relative Error: {abs(np.interp(100, S_num, V_num) - gk_call(100, K, rd, rf, sigma, 1.0))/gk_call(100, K, rd, rf, sigma, 1.0)*100:.4f}%\")\n\n\nAnalytical Call Price at S=100: $8.6525"
   },
   {
-    "objectID": "Presentation_Slide/index.html#von-neumann-stability-analysis",
-    "href": "Presentation_Slide/index.html#von-neumann-stability-analysis",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#von-neumann-stability-analysis",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#von-neumann-stability-analysis",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Von Neumann Stability Analysis",
     "text": "Von Neumann Stability Analysis\nMethodology\nTest stability using Fourier mode: \\(V_i^n = \\xi^n e^{ik i\\Delta S}\\)\nAmplification Factor \\(\\xi\\) determines stability:\n\n\\(|\\xi| \\leq 1\\): Stable (errors don’t grow)\n\\(|\\xi| &gt; 1\\): Unstable (errors explode)\n\nResults Summary\n\n\n\n\n\n\n\n\n\n\nScheme\nAmplification Factor\nStability Condition\nPractical Implication\n\n\n\n\nFTCS\n\\(\\xi = 1 - \\lambda + \\lambda\\cos(k\\Delta S)\\)\n\\(\\lambda \\leq 0.5\\)\nRequires small \\(\\Delta t\\)\n\n\nBTCS\n\\(\\xi = \\frac{1}{1 + \\lambda - \\lambda\\cos(k\\Delta S)}\\)\nAlways \\(\\|\\xi\\| \\leq 1\\)\nAny \\(\\Delta t\\) works\n\n\nCN\n\\(\\xi = \\frac{1 - \\lambda/2 + (\\lambda/2)\\cos(k\\Delta S)}{1 + \\lambda/2 - (\\lambda/2)\\cos(k\\Delta S)}\\)\nAlways \\(\\|\\xi\\| \\leq 1\\)\nAny \\(\\Delta t\\) works\n\n\n\n\nwhere \\(\\lambda = \\frac{\\sigma^2 S_{max}^2 \\Delta t}{\\Delta S^2}\\)"
   },
   {
-    "objectID": "Presentation_Slide/index.html#stability-demonstration",
-    "href": "Presentation_Slide/index.html#stability-demonstration",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#stability-demonstration",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#stability-demonstration",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Stability Demonstration",
     "text": "Stability Demonstration\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWarning\n\n\nFTCS requires \\(\\Delta t &lt; 10^{-4}\\) for stability with this grid. BTCS/CN have no such restriction.\n\n\n\n\n\n\n\n\n\nKey Insights: Stability in Action\n\n\n\nLeft plot: All 2 methods (Analytical, FTCS, CN) overlap perfectly when stable → numerical methods work when conditions are right\nRight plot (CFL diagram): Green zone = safe for FTCS, red zone = unstable and will explode\nCritical lesson: FTCS needs tiny time steps (Δt &lt; 10⁻⁴) → requires 1000+ steps, very expensive!\nWhy this matters: In production, you want methods that “just work” without worrying about stability crashes"
   },
   {
-    "objectID": "Presentation_Slide/index.html#theoretical-convergence-rates",
-    "href": "Presentation_Slide/index.html#theoretical-convergence-rates",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#theoretical-convergence-rates",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#theoretical-convergence-rates",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Theoretical Convergence Rates",
     "text": "Theoretical Convergence Rates\nTruncation Error Analysis\n\n\nFTCS:\n\nTime: \\(O(\\Delta t)\\)\nSpace: \\(O(\\Delta S^2)\\)\nOverall: First-order in time\n\nBTCS:\n\nTime: \\(O(\\Delta t)\\)\nSpace: \\(O(\\Delta S^2)\\)\nOverall: First-order in time\n\n\nCrank-Nicolson:\n\nTime: \\(O(\\Delta t^2)\\)\nSpace: \\(O(\\Delta S^2)\\)\nOverall: Second-order in time\n\n\n\n\n\n\n\nAdvantage\n\n\nCN achieves same accuracy with 4x larger time steps\n\n\n\n\nError Metrics\n\nL∞ Error: \\(\\|E\\|_\\infty = \\max_i |V_i^{exact} - V_i^{numerical}|\\)\nL² Error: \\(\\|E\\|_2 = \\sqrt{\\frac{1}{M}\\sum_i (V_i^{exact} - V_i^{numerical})^2}\\)\nRelative Error: \\(\\frac{\\|E\\|}{\\|V^{exact}\\|}\\)"
   },
   {
-    "objectID": "Presentation_Slide/index.html#convergence-study-results",
-    "href": "Presentation_Slide/index.html#convergence-study-results",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#convergence-study-results",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#convergence-study-results",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Convergence Study Results",
     "text": "Convergence Study Results\n\n\nConvergence Studies:\n\nFTCS:\n  M    N        dS       dt     Error\n 20   36 19.999500 0.027778 11.821787\n 40  143  9.999750 0.006993 11.821787\n 80  569  4.999875 0.001757 11.821787\n160 2276  2.499938 0.000439 11.821787\n\nBTCS:\n  M   N        dS      dt     Error\n 20  20 19.999500 0.05000 11.821787\n 40  40  9.999750 0.02500 11.821787\n 80  80  4.999875 0.01250 11.821787\n160 160  2.499938 0.00625 11.821787\n\nCN:\n  M   N        dS      dt    Error\n 20  20 19.999500 0.05000 1.180862\n 40  40  9.999750 0.02500 0.249385\n 80  80  4.999875 0.01250 0.059586\n160 160  2.499938 0.00625 0.014733\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKey Finding\n\n\nCN achieves second-order convergence (slope = 2), confirming \\(O(\\Delta t^2)\\) accuracy. BTCS shows first-order (slope = 1).\n\n\n\n\n\n\n\n\n\nKey Insights: Convergence Study Results\n\n\n\nLeft plot (log-log): Straight lines on log-log plot confirm theoretical predictions → CN slope = 2 (steeper), BTCS slope = 1\nSteeper is better: CN error drops 4× when halving Δt, while BTCS only drops 2× → CN reaches target accuracy faster\nRight plot (EOA bars): Empirical Order of Accuracy measures actual convergence → CN bars near 2, BTCS bars near 1 ✓\nPractical implication: To get 0.01% error, CN needs ~100 steps but BTCS needs ~400 steps → CN is 4× more efficient\nTheory matches practice: Measured convergence rates match mathematical predictions → validates our implementation"
   },
   {
-    "objectID": "Presentation_Slide/index.html#accuracy-vs-computational-cost",
-    "href": "Presentation_Slide/index.html#accuracy-vs-computational-cost",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#accuracy-vs-computational-cost",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#accuracy-vs-computational-cost",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Accuracy vs Computational Cost",
     "text": "Accuracy vs Computational Cost\n\n\n\n\n\n\nWinner: Crank-Nicolson\n\n\nFor same accuracy, CN requires 50-75% fewer time steps than BTCS, translating to significant computational savings."
   },
   {
-    "objectID": "Presentation_Slide/index.html#d-option-price-surface",
-    "href": "Presentation_Slide/index.html#d-option-price-surface",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#d-option-price-surface",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#d-option-price-surface",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "3D Option Price Surface",
     "text": "3D Option Price Surface\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\nSurface shows smooth, well-behaved option values. Maximum at high S and long τ, converging to intrinsic value as τ → 0.\n\n\n\n\n\n\n\n\n\nKey Insights: Reading the Price Surface\n\n\n\n3D surface (left): Shows how option value depends on BOTH spot price and time → higher spot + more time = higher value\nContour plot (right): Lines connect equal option prices → bunched near strike (K=100) means rapid price changes there\nRed dashed line: Strike price separates in-the-money (right) from out-of-the-money (left) regions\nTime decay visible: As τ → 0 (bottom of plots), surface flattens to payoff max(S-K, 0) → time value disappears\nSmooth surface = correct implementation: No kinks or jumps means our analytical solution is well-behaved and trustworthy"
   },
   {
-    "objectID": "Presentation_Slide/index.html#time-evolution-of-option-prices",
-    "href": "Presentation_Slide/index.html#time-evolution-of-option-prices",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#time-evolution-of-option-prices",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#time-evolution-of-option-prices",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Time Evolution of Option Prices",
     "text": "Time Evolution of Option Prices\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTime Decay (Theta)\n\n\nTime value is maximized near ATM (S ≈ K) and diminishes as maturity approaches. Deep ITM/OTM options have minimal time value.\n\n\n\n\n\n\n\n\n\nKey Insights: Time Evolution of Option Prices\n\n\n\nLeft plot: All curves converge to the black dashed line (intrinsic value) as τ → 0 → options become payoff at expiry\nColor gradient: Darker = longer time to expiry → more time value → curves further above intrinsic value\nRight plot (time value): Shows pure optionality (price - intrinsic) → peaks at ATM where uncertainty is highest\nTime value decay: Notice how time value shrinks from ~$10 (τ=1yr) to nearly $0 (τ=0.01yr) → theta in action!\nDeep ITM/OTM behavior: Far from strike, all curves nearly flat → mostly intrinsic value, little time value to lose"
   },
   {
-    "objectID": "Presentation_Slide/index.html#numerical-vs-analytical-comparison",
-    "href": "Presentation_Slide/index.html#numerical-vs-analytical-comparison",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#numerical-vs-analytical-comparison",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#numerical-vs-analytical-comparison",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Numerical vs Analytical Comparison",
-    "text": "Numerical vs Analytical Comparison\n\n\nPrice at S=100: CN=8.643050, Exact=8.652529\nRelative Error: 0.1095%\nCN: 0.042s (N=100)\nPrice at S=100: CN=8.643050, Exact=8.652529, Error=9.48e-03\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAccuracy Achievement\n\n\nMaximum relative error &lt; 0.1% across entire domain. Excellent agreement validates implementation.\n\n\n\n\n\n\n\n\n\nKey Insights: Numerical vs Analytical Comparison\n\n\n\nLeft plot: Black (analytical) and red dashed (numerical) lines are virtually identical → CN works extremely well!\nRed dots: Actual grid points where we computed values → smooth interpolation between them\nRight plot (errors): Blue = absolute error, Red = relative error (%) → both extremely small\nError statistics: Max relative error &lt; 0.1% means if true price is $10, our error is &lt; $0.01 → trading-grade accuracy\nWhere errors peak: Slightly higher near ATM (around strike) where Greeks are largest → but still negligible\nValidation success: Numerical method reproduces analytical solution to machine precision → implementation is correct ✓"
+    "text": "Numerical vs Analytical Comparison\n\n\nPrice at S=100: CN=8.643050, Exact=8.652529\nRelative Error: 0.1095%\nCN: 0.026s (N=100)\nPrice at S=100: CN=8.643050, Exact=8.652529, Error=9.48e-03\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAccuracy Achievement\n\n\nMaximum relative error &lt; 0.1% across entire domain. Excellent agreement validates implementation.\n\n\n\n\n\n\n\n\n\nKey Insights: Numerical vs Analytical Comparison\n\n\n\nLeft plot: Black (analytical) and red dashed (numerical) lines are virtually identical → CN works extremely well!\nRed dots: Actual grid points where we computed values → smooth interpolation between them\nRight plot (errors): Blue = absolute error, Red = relative error (%) → both extremely small\nError statistics: Max relative error &lt; 0.1% means if true price is $10, our error is &lt; $0.01 → trading-grade accuracy\nWhere errors peak: Slightly higher near ATM (around strike) where Greeks are largest → but still negligible\nValidation success: Numerical method reproduces analytical solution to machine precision → implementation is correct ✓"
   },
   {
-    "objectID": "Presentation_Slide/index.html#method-comparison-summary",
-    "href": "Presentation_Slide/index.html#method-comparison-summary",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#method-comparison-summary",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#method-comparison-summary",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Method Comparison Summary",
     "text": "Method Comparison Summary\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKey Insights: Method Comparison Summary\n\n\n\nStability column: Only FTCS has “Conditional” → dangerous! BTCS/CN are “Unconditional” → safe for any time step\nTime Order column: CN has O(Δt²) vs O(Δt) for others → this is the game-changer for efficiency\nBest Use column: Green highlight on CN “PRODUCTION (BEST)” → this is the industry standard for good reason\nWhy CN wins: Combines unconditional stability (like BTCS) + second-order accuracy (better than both) → best of both worlds\nMemory/Complexity: All three have same O(M) memory and O(MN) complexity → CN doesn’t cost more, just works better!\nBottom line: For real trading systems, always choose Crank-Nicolson unless you have a very specific reason not to"
   },
   {
-    "objectID": "Presentation_Slide/index.html#practical-recommendations",
-    "href": "Presentation_Slide/index.html#practical-recommendations",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#practical-recommendations",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#practical-recommendations",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Practical Recommendations",
     "text": "Practical Recommendations\n\n\nProduction Systems\n✓ Use Crank-Nicolson\n\nSecond-order temporal accuracy\nUnconditionally stable\nBest accuracy-to-cost ratio\nIndustry standard\n\nImplementation Tips\n\nStart with M=100, N=200\nRefine until error &lt; tolerance\nMonitor Greeks accuracy\nValidate against analytical\n\n\nQuick Prototyping\nFTCS acceptable if:\n\nTesting algorithm logic\nCoarse resolution sufficient\nCarefully monitor stability\n\nRobustness Priority\nBTCS recommended if:\n\nGuaranteed stability critical\nSimple implementation preferred\nSlight accuracy loss acceptable\n\n\n\n\n\n\n\nWarning\n\n\nNever use FTCS in production - stability risk too high"
   },
   {
-    "objectID": "Presentation_Slide/index.html#computational-performance",
-    "href": "Presentation_Slide/index.html#computational-performance",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#computational-performance",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#computational-performance",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Computational Performance",
     "text": "Computational Performance\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKey Insight\n\n\nCN achieves lowest error for given runtime due to \\(O(\\Delta t^2)\\) convergence. Optimal choice for production systems."
   },
   {
-    "objectID": "Presentation_Slide/index.html#summary-of-achievements",
-    "href": "Presentation_Slide/index.html#summary-of-achievements",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#summary-of-achievements",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#summary-of-achievements",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Summary of Achievements",
     "text": "Summary of Achievements\n✓ Completed Objectives\n\nTheoretical Foundation\n\nDerived Garman-Kohlhagen PDE from first principles\nObtained closed-form analytical solutions\nComputed Greeks analytically\n\nNumerical Implementation\n\nImplemented three finite difference schemes\nValidated against analytical benchmarks\nAchieved &lt;0.1% relative error\n\nStability & Convergence\n\nProved stability properties (Von Neumann)\nVerified theoretical convergence rates\nConfirmed CN as optimal method"
   },
   {
-    "objectID": "Presentation_Slide/index.html#key-findings",
-    "href": "Presentation_Slide/index.html#key-findings",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#key-findings",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#key-findings",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Key Findings",
     "text": "Key Findings"
   },
   {
-    "objectID": "Presentation_Slide/index.html#practical-implications",
-    "href": "Presentation_Slide/index.html#practical-implications",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#practical-implications",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#practical-implications",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Practical Implications",
     "text": "Practical Implications\nFor Practitioners\n\n\nPricing & Valuation\n\nUse analytical formulas for standard Europeans\nCN for exotic payoffs/boundaries\nValidate numerical with analytical benchmarks\n\nRisk Management\n\nCompute Greeks for hedging\nMonitor gamma for rebalancing\nTrack theta for time decay\n\n\nImplementation Guidelines\n\nStart with M=100, N=200 (CN)\nVerify convergence with refinement\nCompare against Black-Scholes\nDocument stability parameters\n\nCost Considerations\n\nCN: Best accuracy/cost\nBTCS: Fallback if simplicity needed\nNever FTCS in production\n\n\nExtensions to Practice\n\nAmerican options (free boundaries)\nBarrier options (modified boundaries)\nReal market calibration (implied volatility)"
   },
   {
-    "objectID": "Presentation_Slide/index.html#limitations-future-work",
-    "href": "Presentation_Slide/index.html#limitations-future-work",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#limitations-future-work",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#limitations-future-work",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Limitations & Future Work",
     "text": "Limitations & Future Work\nCurrent Limitations\n\n\n\n\n\n\n\n\n\nCategory\nLimitation\nImpact\n\n\n\n\nModel Assumptions\nConstant σ, rd, rf\nIgnores volatility smiles, term structures\n\n\nMarket Reality\nNo jumps, no transaction costs\nSimplified dynamics\n\n\nExercise Type\nEuropean only\nCan’t handle early exercise\n\n\nNumerics\nUniform grids\nInefficient near boundaries\n\n\nDimensionality\n1D only\nMulti-asset requires extension\n\n\n\n\nFuture Directions\n\nAdvanced Models\n\nLocal/stochastic volatility (SABR, Heston)\nJump-diffusion processes (Merton, Kou)\nMulti-factor interest rate models\n\nNumerical Enhancements\n\nAdaptive mesh refinement (AMR)\nHigher-order schemes (4th-order compact)\nGPU acceleration for real-time pricing"
   },
   {
-    "objectID": "Presentation_Slide/index.html#future-work-cont.",
-    "href": "Presentation_Slide/index.html#future-work-cont.",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#future-work-cont.",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#future-work-cont.",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Future Work (cont.)",
     "text": "Future Work (cont.)\n\nExotic Products\n\nAmerican options (optimal stopping)\nBarrier options (knock-in/out)\nAsian options (path-dependent)\nDigital options (discontinuous payoffs)\n\nMarket Applications\n\nCalibration to real FX option data\nImplied volatility surface construction\nReal-time trading systems\nComprehensive VaR frameworks\n\nAlgorithmic Trading\n\nAutomated delta-hedging strategies\nGreeks-based portfolio optimization\nHigh-frequency market making\n\n\n\n\n\n\n\n\nResearch Opportunity\n\n\nCombining ML with PDE solvers for faster calibration and pricing under complex models"
   },
   {
-    "objectID": "Presentation_Slide/index.html#final-remarks",
-    "href": "Presentation_Slide/index.html#final-remarks",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#final-remarks",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#final-remarks",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Final Remarks",
     "text": "Final Remarks\nProject Success Criteria Met\n\n\n✓ Theoretical Rigor - Complete mathematical derivation - Analytical solution validated - Greeks computed accurately\n✓ Numerical Excellence - Three schemes implemented - Stability proven & verified - Convergence rates confirmed\n\n✓ Practical Relevance - Production-ready code - Performance benchmarked - Real-world applications demonstrated\n✓ Educational Value - Clear methodology - Reproducible results - Extensible framework\n\nThe Bottom Line\n\n\n\n\n\n\nRecommendation\n\n\nCrank-Nicolson is the clear winner for production FX option pricing systems: - Unconditionally stable ✓ - Second-order accurate ✓ - Computationally efficient ✓ - Industry-proven ✓"
   },
   {
-    "objectID": "Presentation_Slide/index.html#thank-you",
-    "href": "Presentation_Slide/index.html#thank-you",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#thank-you",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#thank-you",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "Thank You",
     "text": "Thank You\n\nFrom Theory to Implementation\n\nComputational Finance | PDE Methods | Quantitative Analysis\n\nKey Takeaways:\n✓ Rigorous mathematical foundation\n✓ Validated numerical methods\n✓ Production-ready implementation\n✓ Practical risk management tools\n\nQuestions & Discussion"
   },
   {
-    "objectID": "Presentation_Slide/index.html#references",
-    "href": "Presentation_Slide/index.html#references",
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/index.html#references",
+    "href": "Presentation_Slide_Currency_Option_Pricing/index.html#references",
     "title": "Garman-Kohlhagen European Currency Option Pricing",
     "section": "References",
     "text": "References\n\nFoundational Papers:\n\nBlack, F., & Scholes, M. (1973). The Pricing of Options and Corporate Liabilities. Journal of Political Economy, 81(3), 637-654.\nMerton, R. C. (1973). Theory of Rational Option Pricing. Bell Journal of Economics and Management Science, 4(1), 141-183.\nGarman, M. B., & Kohlhagen, S. W. (1983). Foreign Currency Option Values. Journal of International Money and Finance, 2(3), 231-237.\n\nNumerical Methods:\n\nWilmott, P., Howison, S., & Dewynne, J. (1995). The Mathematics of Financial Derivatives. Cambridge University Press.\nDuffy, D. J. (2006). Finite Difference Methods in Financial Engineering. Wiley.\nTavella, D., & Randall, C. (2000). Pricing Financial Instruments: The Finite Difference Method. Wiley.\n\nComputational Finance:\n\nGlasserman, P. (2003). Monte Carlo Methods in Financial Engineering. Springer.\nHilber, N., Reichmann, O., Schwab, C., & Winter, C. (2013). Computational Methods for Quantitative Finance. Springer."
+  },
+  {
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/GLOSSARY.html",
+    "href": "Presentation_Slide_Currency_Option_Pricing/GLOSSARY.html",
+    "title": "",
+    "section": "",
+    "text": "Code"
+  },
+  {
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/GLOSSARY.html#abbreviations-and-acronyms",
+    "href": "Presentation_Slide_Currency_Option_Pricing/GLOSSARY.html#abbreviations-and-acronyms",
+    "title": "",
+    "section": "Abbreviations and Acronyms",
+    "text": "Abbreviations and Acronyms\n\n\n\n\n\n\n\n\nAbbreviation\nFull Form\nContext\n\n\n\n\nFX\nForeign Exchange\nCurrency trading markets\n\n\nPDE\nPartial Differential Equation\nMathematical equation with multiple variables\n\n\nSDE\nStochastic Differential Equation\nEquation describing random processes\n\n\nATM\nAt-The-Money\nOption where spot price equals strike price (S ≈ K)\n\n\nITM\nIn-The-Money\nCall: S &gt; K, Put: S &lt; K (option has intrinsic value)\n\n\nOTM\nOut-of-The-Money\nCall: S &lt; K, Put: S &gt; K (option has no intrinsic value)\n\n\nFTCS\nForward-Time Central-Space\nExplicit finite difference method\n\n\nBTCS\nBackward-Time Central-Space\nImplicit finite difference method\n\n\nCN\nCrank-Nicolson\nImplicit finite difference method (average of FTCS and BTCS)\n\n\nCFL\nCourant-Friedrichs-Lewy\nStability condition for numerical methods\n\n\nP&L\nProfit and Loss\nFinancial gain or loss from trading\n\n\nGMV\nGlobal Minimum Variance\nPortfolio with lowest possible risk\n\n\nEOA\nEmpirical Order of Accuracy\nMeasured convergence rate from numerical experiments"
+  },
+  {
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/GLOSSARY.html#mathematical-symbols",
+    "href": "Presentation_Slide_Currency_Option_Pricing/GLOSSARY.html#mathematical-symbols",
+    "title": "",
+    "section": "Mathematical Symbols",
+    "text": "Mathematical Symbols\n\n\n\n\n\n\n\n\nSymbol\nFull Name\nDefinition\n\n\n\n\nS(t)\nSpot Price\nCurrent exchange rate at time t\n\n\nK\nStrike Price\nAgreed-upon exchange rate for the option\n\n\nτ (tau)\nTime to Maturity\nTime remaining until option expiration (τ = T - t)\n\n\nT\nMaturity Date\nExpiration date of the option\n\n\nr_d\nDomestic Interest Rate\nInterest rate in the domestic currency\n\n\nr_f\nForeign Interest Rate\nInterest rate in the foreign currency\n\n\nσ (sigma)\nVolatility\nMeasure of how much the exchange rate fluctuates\n\n\nΔt (Delta t)\nTime Step\nSize of time interval in numerical methods\n\n\nΔS (Delta S)\nSpatial Step\nSize of price interval in numerical grid\n\n\nW_t\nWiener Process\nMathematical model of random motion (Brownian motion)\n\n\nN(·)\nNormal CDF\nCumulative Distribution Function of standard normal distribution\n\n\nn(·)\nNormal PDF\nProbability Density Function of standard normal distribution\n\n\nd₁, d₂\nAuxiliary Variables\nIntermediate calculations in Black-Scholes-type formulas"
+  },
+  {
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/GLOSSARY.html#technical-terms---student-friendly-definitions",
+    "href": "Presentation_Slide_Currency_Option_Pricing/GLOSSARY.html#technical-terms---student-friendly-definitions",
+    "title": "",
+    "section": "Technical Terms - Student-Friendly Definitions",
+    "text": "Technical Terms - Student-Friendly Definitions\n\nFinancial Concepts\nOption &gt; A contract giving the right (but not obligation) to buy or sell an asset at a predetermined price on or before a specific date. Think of it as “price insurance” for future transactions.\nCall Option &gt; The right to BUY foreign currency at strike price K. You profit when the spot price goes UP above the strike.\nPut Option &gt; The right to SELL foreign currency at strike price K. You profit when the spot price goes DOWN below the strike.\nIntrinsic Value &gt; The profit you would make if you exercised the option RIGHT NOW. For calls: max(S - K, 0). For puts: max(K - S, 0).\nTime Value &gt; The extra value beyond intrinsic value due to the possibility that the option could become more profitable before expiration. Time value = Option Price - Intrinsic Value.\nStrike Price (K) &gt; The “locked-in” exchange rate you agreed to when buying the option. This is the price at which you can buy (call) or sell (put) the currency.\nSpot Price (S) &gt; The current market exchange rate RIGHT NOW. This changes constantly based on market conditions.\nVolatility (σ) &gt; How “jumpy” or unpredictable the exchange rate is. High volatility = big price swings = more valuable options (more chance of profit).\nInterest Rate Differential (r_d - r_f) &gt; The difference between domestic and foreign interest rates. This affects the “drift” or expected direction of currency movement.\nHedging &gt; Reducing risk by taking offsetting positions. Like buying insurance to protect against unfavorable price movements.\nDelta Hedging &gt; A strategy to eliminate directional risk by holding the right amount of the underlying currency to offset option price changes.\n\n\nThe Greeks\nDelta (Δ) &gt; How much the option price changes when the spot price moves by $1. Range: 0 to 1 for calls. Think of it as the “speed” of price change.\nGamma (Γ) &gt; How much Delta changes when the spot price moves. It measures the “curvature” or acceleration of option price changes. High gamma = Delta changes rapidly.\nVega (ν) &gt; How much the option price changes when volatility increases by 1%. High vega = very sensitive to market uncertainty.\nTheta (Θ) &gt; How much the option loses value each day due to time passing. Usually negative (time decay). Think of it as the “cost of waiting.”\nRho (ρ) &gt; How much the option price changes when interest rates change by 1%. Less important for short-term options.\n\n\nMathematical Concepts\nPartial Differential Equation (PDE) &gt; An equation involving rates of change with respect to multiple variables (e.g., time AND price). The Garman-Kohlhagen PDE describes how option value evolves.\nStochastic Differential Equation (SDE) &gt; An equation describing how something random (like exchange rates) changes over time. “Stochastic” = involving randomness.\nBrownian Motion / Wiener Process &gt; A mathematical model of continuous random movement, like a particle jiggling in water. Used to model unpredictable price changes.\nRisk-Neutral Measure &gt; A mathematical “world” where all assets earn the risk-free rate on average. Not the real world, but makes pricing easier!\nItô’s Lemma &gt; A calculus rule for functions of random processes. It’s like the chain rule, but for stochastic processes. Essential for deriving the PDE.\nNo-Arbitrage Principle &gt; The idea that you can’t make risk-free profit from price differences. If you could, everyone would do it until prices adjust.\nBoundary Conditions &gt; Rules specifying option values at the edges of our domain (e.g., when S = 0 or S = ∞, or at expiration T).\nTerminal Condition &gt; The option value at expiration. For calls: max(S - K, 0). For puts: max(K - S, 0). This is where we start solving backward in time.\n\n\nNumerical Methods Concepts\nFinite Difference Method &gt; A technique to solve PDEs by replacing continuous derivatives with discrete approximations on a grid. Like approximating a smooth curve with small straight line segments.\nGrid / Mesh &gt; A set of discrete points in space and time where we calculate option values. Think of it as a spreadsheet with rows (prices) and columns (times).\nExplicit Method (FTCS) &gt; Directly calculates future values from current values. Fast but can be unstable (blow up) if time steps are too large.\nImplicit Method (BTCS, CN) &gt; Solves a system of equations to find future values. Slower per step but stable for any time step size.\nStability &gt; Whether small errors stay small (stable) or grow exponentially (unstable). Unstable methods produce garbage results.\nConvergence &gt; As we make the grid finer (smaller Δt and ΔS), the numerical solution approaches the true analytical solution.\nTruncation Error &gt; The error introduced by approximating derivatives with finite differences. Smaller grid spacing = smaller error.\nOrder of Accuracy &gt; How fast the error decreases as grid spacing shrinks. First-order: error ∝ Δt. Second-order: error ∝ (Δt)² (much better!).\nCFL Condition &gt; A stability requirement for explicit methods: Δt must be small enough relative to ΔS. Named after Courant, Friedrichs, and Lewy.\nTridiagonal Matrix &gt; A matrix with non-zero elements only on three diagonals (main diagonal and one above/below). Arises naturally in finite difference methods and can be solved efficiently.\nThomas Algorithm &gt; An efficient method to solve tridiagonal systems. Much faster than general matrix inversion (O(n) vs O(n³)).\n\n\nAdvanced Concepts\nPut-Call Parity &gt; A relationship between call and put prices: C - P = S·e^(-r_f·τ) - K·e^(-r_d·τ). Prevents arbitrage opportunities.\nVon Neumann Stability Analysis &gt; A mathematical technique to determine if a numerical method is stable by testing how Fourier modes (wave-like patterns) evolve.\nAmplification Factor (ξ) &gt; In stability analysis, how much errors grow (or shrink) per time step. |ξ| ≤ 1 means stable.\nCourant Number / CFL Number (λ) &gt; A dimensionless parameter λ = σ²S²Δt/ΔS² that determines stability for explicit methods. Must be ≤ 0.5 for FTCS.\nUnconditional Stability &gt; A method that is stable for ANY time step size (BTCS and CN have this property). Very desirable for practical use!\nSecond-Order Accuracy &gt; Error decreases with the square of grid spacing. If you halve Δt, error drops by 4×. Much better than first-order (only 2× improvement).\nGarman-Kohlhagen Model &gt; Extension of Black-Scholes to currency options, accounting for foreign interest rates. Published in 1983.\nClosed-Form Solution &gt; An exact formula you can write down and compute directly (like the Garman-Kohlhagen formulas). Opposite of numerical approximation."
+  },
+  {
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/GLOSSARY.html#quick-reference-common-notation-patterns",
+    "href": "Presentation_Slide_Currency_Option_Pricing/GLOSSARY.html#quick-reference-common-notation-patterns",
+    "title": "",
+    "section": "Quick Reference: Common Notation Patterns",
+    "text": "Quick Reference: Common Notation Patterns\n\nSubscripts (e.g., V_i^n): Position on grid. i = space index, n = time index\nSuperscripts in math (e.g., S²): Exponents (S squared)\nPartial derivatives (∂V/∂S): Rate of change of V with respect to S, holding other variables constant\nexp(-r·τ): Exponential function, same as e^(-r·τ), used for discounting future values\nmax(a, b): Maximum of a and b. Returns whichever is larger\nO(Δt²): “Big O notation” - describes how error scales with grid size"
+  },
+  {
+    "objectID": "Presentation_Slide_Currency_Option_Pricing/GLOSSARY.html#tips-for-understanding-the-presentation",
+    "href": "Presentation_Slide_Currency_Option_Pricing/GLOSSARY.html#tips-for-understanding-the-presentation",
+    "title": "",
+    "section": "Tips for Understanding the Presentation",
+    "text": "Tips for Understanding the Presentation\n\nStart with intuition: Understand WHAT each concept means before diving into HOW to calculate it\nFollow the Greeks: Delta, Gamma, Vega, Theta are your friends for understanding option behavior\nStability matters: An unstable numerical method is useless, no matter how fast\nCN is the winner: Crank-Nicolson combines the best of both worlds (stable + accurate)\nVisualizations tell the story: Pay attention to the plots - they show what the math means\nATM is special: Most action happens near the strike price (S ≈ K)\n\n\nThis glossary is designed to accompany the “Garman-Kohlhagen European Currency Option Pricing” presentation."
   },
   {
     "objectID": "index.html",

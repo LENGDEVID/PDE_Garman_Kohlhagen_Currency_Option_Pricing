@@ -14,7 +14,7 @@ website:
       - text: "Home"
         href: index.qmd
       - text: "Presentation"
-        href: Presentation_Slide/presentation.qmd
+        href: Presentation_Slide_Currency_Option_Pricing/presentation.qmd
       - text: "Source Code"
         href: Source_Code/European_Option_Currency_Pricing.qmd
     right:

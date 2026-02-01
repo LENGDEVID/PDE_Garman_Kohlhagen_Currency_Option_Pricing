@@ -17,7 +17,7 @@ This work extends the Black-Scholes framework to foreign exchange markets, treat
 ::: {.grid}
 
 ::: {.g-col-6}
-### 📊 [Presentation Slides](Presentation_Slide/presentation.qmd)
+### 📊 [Presentation Slides](Presentation_Slide_Currency_Option_Pricing/presentation.qmd)
 
 Interactive RevealJS presentation covering:
 
@@ -27,7 +27,7 @@ Interactive RevealJS presentation covering:
 - **Validation**: Stability, convergence, and accuracy analysis
 - **The Greeks**: Risk sensitivities and hedging applications
 
-[View Presentation →](Presentation_Slide/presentation.qmd){.btn .btn-primary}
+[View Presentation →](Presentation_Slide_Currency_Option_Pricing/presentation.qmd){.btn .btn-primary}
 :::
 
 ::: {.g-col-6}
@@ -73,7 +73,7 @@ This project was developed as part of advanced coursework in Partial Differentia
 
 ::: {.callout-tip}
 ## Getting Started
-- For a visual overview, start with the [**Presentation**](Presentation_Slide/presentation.qmd)
+- For a visual overview, start with the [**Presentation**](Presentation_Slide_Currency_Option_Pricing/presentation.qmd)
 - For technical details and code, explore the [**Source Code Documentation**](Source_Code/European_Option_Currency_Pricing.qmd)
 - All code is available on [**GitHub**](https://github.com/LENGDEVID/PDE_Garman_Kohlhagen_Currency_Option_Pricing)
 :::
