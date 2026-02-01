@@ -16,6 +16,7 @@ ENV/
 # Quarto
 /.quarto/
 *_cache/
+_freeze/
 
 # OS
 .DS_Store
